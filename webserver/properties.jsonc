@@ -1,0 +1,30 @@
+{
+    /*
+    Properties for web server & Discord bot
+
+    Editable here: Server port & hostname, discord bot token, classwork verification standard, classwork domain whitelist
+    */
+
+    // Discord bot token
+    "Token": "42069",
+    "Port": "8443",
+    "Hostname": "localhost",
+    // Domain whitelist for class owners
+    "TeacherDomainWhitelist": {
+        "enabled": false,
+        "allowed": [
+            "example.io",
+            "example.com"
+        ]
+    },
+    // Domain whitelist for worker scripts
+    "StudentDomainWhitelist": {
+        "enabled": false,
+        "allowed": [
+            "example.io",
+            "example.com"
+        ]
+    },
+    // Percentage of worker scripts in class needed to verify material, expressed as decimal
+    "VerificationStandard": 1
+}
