@@ -20,9 +20,7 @@ function shareClassData() {
         console.log("added " + element.title + " to report queue")
       }
       }
-      catch(err) {
-
-      }
+      catch(err) {}
     }
     }
     catch(err) {}
