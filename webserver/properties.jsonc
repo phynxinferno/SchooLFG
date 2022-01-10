@@ -2,7 +2,7 @@
     /*
     Properties for web server & Discord bot
 
-    Editable here: Server port & hostname, discord bot token, classwork verification standard, classwork domain whitelist
+    Editable here: Server port & hostname, Discord bot token, classwork verification standard, classwork domain whitelist
     */
 
     // Discord bot token
