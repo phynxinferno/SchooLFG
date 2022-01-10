@@ -1,0 +1,40 @@
+{
+    "//":"Properties for web server & Discord bot",
+    "//":"Editable here: Server port & hostname, Discord bot token, classwork verification standard, classwork domain whitelist",
+
+    "//": "Discord bot token",
+    "Token": "42069",
+    "Port": "8443",
+    "Hostname": "localhost",
+    "//": "Whether to run Discord bot",
+    "DiscordEnabled": true,
+    "//": "Domain whitelist for class owners",
+    "TeacherDomainWhitelist": {
+        "enabled": false,
+        "allowed": [
+            "example.io",
+            "example.com"
+        ]
+    },
+    "//": "Domain whitelist for worker scripts",
+    "StudentDomainWhitelist": {
+        "enabled": false,
+        "allowed": [
+            "example.io",
+            "example.com"
+        ]
+    },
+    "//": "Percentage of worker scripts in agreement in class needed to verify material, expressed as decimal",
+    "VerificationStandard": 1,
+    "//": "Amount of worker scripts in class needed to accept material",
+    "ClassMemberRequirement": 2,
+    "//": "Amount of reports a worker script must fall behind on to time out and no longer be counted in the verification standard  & class member requirement. 1 report = 1 minute",
+    "WorkerTimeout": 1,
+    "//": "What assignment data is published",
+    "DataProperties": {
+        "Title": true,
+        "Description": true,
+        "PublishedDate": true,
+        "Files": false
+    }
+}
