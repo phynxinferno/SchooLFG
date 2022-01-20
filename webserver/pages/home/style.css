@@ -1,0 +1,35 @@
+    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=Poppins:wght@200&family=Roboto+Mono:ital,wght@1,200&display=swap'); 
+    body {
+        background-color: #575757;
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .title {
+        color: White;
+        font-family: 'Poppins', sans-serif;
+        font-size:100px;
+    }
+    .paragraph {
+        color: #dfdfdf;
+    }
+    .subText {
+        color: #acacac
+    }
+    #Topbar {
+        position: absolute;
+        top: 0;
+        left:0;
+        width: 100%;
+        height: 90%;
+        clip-path: polygon(0 0, 100% 0%, 100% 34%, 0 50%);
+        background: rgb(98,113,28);
+        background: linear-gradient(323deg, rgba(98,113,28,1) 0%, rgba(42,159,84,1) 100%);
+        border-radius:0px;
+        z-index: -1;
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
