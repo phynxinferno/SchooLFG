@@ -5,14 +5,85 @@
         <meta name="description" content="Schoolwork organizer and LFG system">
         <title>SchooLFG Web Interface</title>
         <link rel="stylesheet" href="./style.css">
-        <script src="./code.js"> </script>
+        <script>
+            function translateMonth(month) {
+                if(month == 0) {
+                    return "January"
+                } else if(month == 1) {
+                    return "February"
+                } else if(month == 2) {
+                    return "March"
+                } else if(month == 3) {
+                    return "April"
+                } else if(month == 4) {
+                    return "May"
+                } else if(month == 5) {
+                    return "June"
+                } else if(month == 6) {
+                    return "July"
+                } else if(month == 7) {
+                    return "August"
+                } else if(month == 8) {
+                    return "September"
+                } else if(month == 9) {
+                    return "October"
+                } else if(month == 10) {
+                    return "November"
+                } else if(month == 11) {
+                    return "December"
+                } else {
+                    let er = new Error("Invalid month");
+                    throw(er);
+                }
+            }
+            function translateDay(day) {
+                if(day == 0) {
+                    return "Monday"
+                } else if(day == 1) {
+                    return "Tuesday"
+                } else if(day == 2) {
+                    return "Wednesday"
+                } else if (day == 3) {
+                    return "Thursday"
+                } else if(day == 4) {
+                    return "Friday"
+                } else if(day == 5) {
+                    return "Saturday"
+                } else if(day == 6) {
+                    return "Sunday"
+                } else {
+                    let er = new Error("Invalid day");
+                    throw(er);
+                }
+            }
+            document.addEventListener("DOMContentLoaded", function() {
+                setInterval(function() {
+                    console.log("updating");
+                var date = new Date();
+                if (date.getHours() > 11) {
+                    if(date.getHours() > 12) {
+                        var time = date.getHours() - 12 + ":" + date.getMinutes() + " PM"
+                    } else {
+                        var time = date.getHours() + ":" + date.getMinutes() + " PM"
+                    } 
+                } else {
+                    var time = date.getHours() + ":" + date.getMinutes() + "AM"
+                } 
+                document.getElementById("Topbar").children[0].innerHTML = time
+                console.log("Updated time")
+                var tDate = translateDay(date.getDay()) + ", " + translateMonth(date.getMonth()) + " " + date.getDate()
+                document.getElementById("Topbar").children[1].innerHTML = tDate
+                }, 1000)
+            })
+        </script>
     </head>
     <body>
         <div id="NavBar">
-            <p class="navOp">placeholder</p>
-            <p class="navOp">placeholder</p>
-            <p class="navOp">placeholder</p>
-            <p class="navOp">placeholder</p>
+            <p class="navOpNative">Home</p>
+            <a href="../classworkManager/index.html"><p class="navOp">Classwork</p></a>
+            <a href="../contributionManager/index.html"><p class="navOp">My Contributions</p></a>
+            <a href="../clientManager/index.html"><p class="navOp">Account Settings</p></a>
+            <a href="../faq/index.html"><p class="navOp">Help</p></a>
         </div>
         <div id="account" style="position:absolute;right:2%;">
             <img id="pfp" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.2s97t0_Eo1OEaa1aqFYPIQHaEK%26pid%3DApi&f=1">

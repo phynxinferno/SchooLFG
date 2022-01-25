@@ -59,6 +59,14 @@
     .navOp:hover {
         border-bottom-color: #dfdfdf;
     }
+    .navOpNative {
+        display: inline-block;
+        position: relative;
+        margin-left:10px;
+        margin-right:10px;
+        border-bottom-style: solid;
+        border-bottom-color: #dfdfdf;
+    }
     ul {
         list-style-type: none;
         margin: 0;
@@ -74,4 +82,8 @@
     #account {
         color: #ffffff;
         font-family: 'Poppins', sans-serif;
+        }
+    a {
+        color:#dfdfdf;
     }
+
