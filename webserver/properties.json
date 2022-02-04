@@ -1,11 +1,16 @@
 {
-    "//":"Properties for web server & Discord bot",
-    "//":"Editable here: Server port & hostname, Discord bot token, classwork verification standard, classwork domain whitelist",
-
-    "//": "Discord bot token",
+    "//": "Properties for web server & Discord bot",
+    "//": "Editable here: Server port & hostname, Discord bot token, classwork verification standard, classwork domain whitelist",
+    "//": "Discord bot token (change this is you have Discord functionality enabled",
     "Token": "42069",
-    "Port": "8443",
-    "Hostname": "localhost",
+    "//": "May require root permissions to host on port 443",
+    "Port": "443",
+    "Hostname": "10.176.166.34",
+    "//": "Path to RSA certificate & private key. Required for HTTPS. Note that a self signed certificate will cause a 'potential security risk ahead' impersonation warning on most browsers",
+    "RSA": {
+        "Key": "/home/phynx/SchooLFG-Keys/key.pem",
+        "Certificate": "/home/phynx/SchooLFG-Keys/cert.pem"
+    },
     "//": "Whether to run Discord bot",
     "DiscordEnabled": true,
     "//": "Domain whitelist for class owners",
