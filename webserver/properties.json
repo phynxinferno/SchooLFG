@@ -5,7 +5,7 @@
     "Token": "42069",
     "//": "May require root permissions to host on port 443",
     "Port": "443",
-    "Hostname": "10.176.166.34",
+    "Hostname": "localhost",
     "//": "Path to RSA certificate & private key. Required for HTTPS. Note that a self signed certificate will cause a 'potential security risk ahead' impersonation warning on most browsers",
     "RSA": {
         "Key": "/home/phynx/SchooLFG-Keys/key.pem",
