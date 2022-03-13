@@ -7,6 +7,7 @@ const options = {
     cert: fs.readFileSync('/home/phynx/SchooLFG-Keys/cert.pem')
 }
 function genScript(token) {
+    var activeScripts = fs.readFileSync('./requests.json')
     let script = `
         var date = new Date();
         var assignments = [];
@@ -34,6 +35,7 @@ function genScript(token) {
           catch(err) {}
         }
         exampleFetch(` + token + `, ` + properties.Hostname + `, "POST)`    
+        let requests = JSON.parse(fs.readFileSync('./proper'))
     return script;
 }
 var server = https.createServer(options, function(req, res){
@@ -48,7 +50,9 @@ var server = https.createServer(options, function(req, res){
             res.end(fs.readFileSync(__dirname + "/pages/home/index.html"));
         case "POST":
             if(req.headers.message['type'] == 'scReq') {
-
+                res.setHeader("text/javascript")
+                res.writeHead(200)
+                res.end(genScript(Math.floor(Math.random() * 1000)))
             }
     }
 }).listen(properties.Port,properties.Hostname);
