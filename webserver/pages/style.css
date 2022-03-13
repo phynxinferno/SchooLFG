@@ -31,8 +31,8 @@
         width: 100%;
         height: 90%;
         clip-path: polygon(0 0, 100% 0%, 100% 34%, 0 50%);
-        background: rgb(98,113,28);
-        background: linear-gradient(323deg, rgba(98,113,28,1) 0%, rgba(42,159,84,1) 100%);
+        background: rgb(73, 113, 28);
+        background: linear-gradient(323deg, rgb(124, 118, 29) 0%, rgb(75, 159, 42) 100%);
         border-radius:0px;
         z-index: -1;
     }
