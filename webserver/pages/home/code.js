@@ -60,6 +60,6 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("Topbar").children[0].innerHTML = time
     console.log("Updated time")
     var tDate = translateDay(date.getDay()) + ", " + translateMonth(date.getMonth()) + " " + date.getDate()
-    document.getElementById("Topbar").children[1].innerHTML = tDate
+    //document.getElementById("Topbar").children[1].innerHTML = tDate
     }, 1000)
 })
