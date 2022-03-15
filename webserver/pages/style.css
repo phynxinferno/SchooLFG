@@ -5,6 +5,17 @@
         margin-left:0px;
         margin-right: 0px;
     }
+    a {
+        color:#dfdfdf;
+    }
+    hr {
+        border-style: none;
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
     .title {
         color: White;
         font-family: 'Poppins', sans-serif;
@@ -32,20 +43,9 @@
         height: 90%;
         clip-path: polygon(0 0, 100% 0%, 100% 34%, 0 50%);
         background: rgb(73, 113, 28);
-        background: linear-gradient(323deg, rgb(124, 118, 29) 0%, rgb(75, 159, 42) 100%);
+        background: linear-gradient(323deg, rgb(167, 158, 41) 0%, rgb(66, 141, 37) 100%);
         border-radius:0px;
         z-index: -1;
-    }
-    #NavBar {
-        top: 0;
-        position: absolute;
-        z-index: 1;
-        background-color: #46454500;  
-        opacity: 100%;
-        width: 100%;
-        height: 5%;
-        color: #ffffff;
-        font-family: 'Poppins', sans-serif;
     }
     .navOp {
         display: inline-block;
@@ -67,23 +67,72 @@
         border-bottom-style: solid;
         border-bottom-color: #dfdfdf;
     }
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-      }
-      #pfp {
+    #NavBar {
+        top: 0;
+        position: absolute;
+        z-index: 1;
+        background-color: #46454500;  
+        opacity: 100%;
+        width: 100%;
+        height: 5%;
+        color: #ffffff;
+        font-family: 'Poppins', sans-serif;
+    }
+    #pfp {
           height:20px;
           width:20px;
           display:inline-block;
           border-radius: 20px;
           position:relative;
-      }
+    }
     #account {
         color: #ffffff;
         font-family: 'Poppins', sans-serif;
         }
-    a {
-        color:#dfdfdf;
-    }
 
+    #openTasks { 
+        background-color:#646464;
+        position: absolute;
+        right: 10%;
+        top: 17%;
+        width:28.5%;
+        height: 38%;
+        border-radius: 7%;
+        overflow: hidden;
+        color: #ffffff;
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        border-color: #65751b;
+        border-style:dashed;
+        overflow:hidden;
+    }
+    #activeBar {
+        top:0;
+        background-color: #6e6e6e;
+        width: 100%;
+        height: 15%;
+        position: absolute;
+        margin-left: 0;
+        display: block;
+        color: #000000
+    }
+    #activeTask { 
+        margin-left: 2%;
+        margin-top: 2%;
+    }
+    #activeBody {
+        background-color: rgb(182, 192, 44);
+        border-style: solid;
+        border-color:rgb(182, 192, 44);
+        border-width: 3pt;
+        border-radius: 20%;
+    }
+    .taskItem {
+        margin-top: 2%;
+        position: relative;
+        margin-left: 2%;
+    }
+    #status { 
+        right: 2%;
+        position: absolute;
+    }
