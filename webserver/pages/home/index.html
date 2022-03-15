@@ -5,77 +5,7 @@
         <meta name="description" content="Schoolwork organizer and LFG system">
         <title>SchooLFG Web Interface</title>
         <link rel="stylesheet" href="../style.css">
-        <script>
-            function translateMonth(month) {
-                if(month == 0) {
-                    return "January"
-                } else if(month == 1) {
-                    return "February"
-                } else if(month == 2) {
-                    return "March"
-                } else if(month == 3) {
-                    return "April"
-                } else if(month == 4) {
-                    return "May"
-                } else if(month == 5) {
-                    return "June"
-                } else if(month == 6) {
-                    return "July"
-                } else if(month == 7) {
-                    return "August"
-                } else if(month == 8) {
-                    return "September"
-                } else if(month == 9) {
-                    return "October"
-                } else if(month == 10) {
-                    return "November"
-                } else if(month == 11) {
-                    return "December"
-                } else {
-                    let er = new Error("Invalid month");
-                    throw(er);
-                }
-            }
-            function translateDay(day) {
-                if(day == 0) {
-                    return "Monday"
-                } else if(day == 1) {
-                    return "Tuesday"
-                } else if(day == 2) {
-                    return "Wednesday"
-                } else if (day == 3) {
-                    return "Thursday"
-                } else if(day == 4) {
-                    return "Friday"
-                } else if(day == 5) {
-                    return "Saturday"
-                } else if(day == 6) {
-                    return "Sunday"
-                } else {
-                    let er = new Error("Invalid day");
-                    throw(er);
-                }
-            }
-            document.addEventListener("DOMContentLoaded", function() {
-                setInterval(function() {
-                    console.log("updating");
-                var date = new Date();
-                if (date.getHours() > 11) {
-                    if(date.getHours() > 12) {
-                        var time = date.getHours() - 12 + ":" + date.getMinutes() + " PM"
-                    } else {
-                        var time = date.getHours() + ":" + date.getMinutes() + " PM"
-                    } 
-                } else {
-                    var time = date.getHours() + ":" + date.getMinutes() + " AM"
-                } 
-                document.getElementById("Topbar").children[0].innerHTML = time
-                console.log("Updated time")
-                var tDate = translateDay(date.getDay()) + ", " + translateMonth(date.getMonth()) + " " + date.getDate()
-                document.getElementById("Topbar").children[1].innerHTML = tDate
-                }, 1000)
-            })
-        </script>
+        <script src="./code.js"></script>
     </head>
     <body>
         <div id="NavBar">
@@ -91,7 +21,7 @@
         </div>
             <div id="Topbar">
                 <h1 class="title" id="time">Loading Time...</h1>
-                <p class="paragraph" id="date">Loading Date...</p>
+                <p class="paragraph" id="date">No session in progress</p>
             </div>
         </div>
         <div id="Workcontainer">
