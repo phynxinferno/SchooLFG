@@ -47,20 +47,20 @@ function translateDay(day) {
 function updateTime() { 
     setInterval(function() {
         console.log("updating");
-    var date = new Date();
-    if (date.getHours() > 11) {
-        if(date.getHours() > 12) {
-            var time = date.getHours() - 12 + ":" + date.getMinutes() + " PM"
+        var date = new Date();
+        if (date.getHours() > 11) {
+            if(date.getHours() > 12) {
+                var time = date.getHours() - 12 + ":" + date.getMinutes() + " PM"
+            } else {
+                var time = date.getHours() + ":" + date.getMinutes() + " PM"
+            } 
         } else {
-            var time = date.getHours() + ":" + date.getMinutes() + " PM"
+            var time = date.getHours() + ":" + date.getMinutes() + " AM"
         } 
-    } else {
-        var time = date.getHours() + ":" + date.getMinutes() + " AM"
-    } 
-    document.getElementById("Topbar").children[0].innerHTML = time
-    console.log("Updated time")
-    var tDate = translateDay(date.getDay()) + ", " + translateMonth(date.getMonth()) + " " + date.getDate()
-},1000)
+        document.getElementById("Topbar").children[0].innerHTML = time
+        console.log("Updated time")
+        var tDate = translateDay(date.getDay()) + ", " + translateMonth(date.getMonth()) + " " + date.getDate()
+    },1000)
 }
 document.addEventListener("DOMContentLoaded", function() {
     updateTime()
