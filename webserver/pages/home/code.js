@@ -44,7 +44,7 @@ function translateDay(day) {
             return "Sunday"
     }
 }
-document.addEventListener("DOMContentLoaded", function() {
+function updateTime() { 
     setInterval(function() {
         console.log("updating");
     var date = new Date();
@@ -60,6 +60,9 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("Topbar").children[0].innerHTML = time
     console.log("Updated time")
     var tDate = translateDay(date.getDay()) + ", " + translateMonth(date.getMonth()) + " " + date.getDate()
+},1000)
+}
+document.addEventListener("DOMContentLoaded", function() {
+    updateTime()
     //document.getElementById("Topbar").children[1].innerHTML = tDate
-    }, 1000)
 })

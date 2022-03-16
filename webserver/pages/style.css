@@ -132,7 +132,23 @@
         position: relative;
         margin-left: 2%;
     }
-    #status { 
+    .status { 
         right: 2%;
         position: absolute;
+    }
+    .taskIco { 
+        width: 90%;
+        height:auto;
+    }
+    #activeOutline {
+        margin-top: 2px;
+        color: white;
+    }
+    .activeOutlined {
+        display: inline-block;
+        margin-left: 3px;
+    }
+    .outlineIgnore { 
+        display: inline-block;
+        margin-left: 3px;
     }
